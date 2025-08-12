@@ -1,25 +1,82 @@
-// const pizzaPalace = {
-//   pizzas: ['Supercheese', 'Smoked', 'Four meats'],
+// const makeChangeColor = function () {
+//   const changeColor = function (color) {
+//     console.log('changeColor --> this', this);
+//     this.color = color;
+//   };
+//   return changeColor;
+// };
 
-//   checkPizza(pizzaName) {
-//     return this.pizzas.includes(pizzaName);
+// const updateColor = makeChangeColor();
+
+// const hat = {
+//   value: 0,
+//   increment(value) {
+//     this.value += value;
 //   },
 
-//   order(pizzaName) {
-//     const isPizzaAvailable = this.checkPizza(pizzaName);
-
-//     if (!isPizzaAvailable) {
-//       return `Sorry, there is no pizza named «${pizzaName}»`;
-//     }
-
-//     return `Order accepted, preparing «${pizzaName}» pizza`;
+//   decrement(value) {
+//     this.value -= value;
 //   },
 // };
 
-// console.log(pizzaPalace.checkPizza('Smoked'));
+// const fun = function (value, callback) {
+//   callback(value);
+// };
 
-function foo() {
-  console.log(this);
-}
+// fun(10, hat.increment.bind(hat));
+// console.log(hat);
 
-foo();
+// const parent = {
+//   name: 'Stacey',
+//   surname: 'Moore',
+//   age: 54,
+//   heritage: 'Irish',
+// };
+
+// const child = Object.create(parent);
+// child.name = 'Jason';
+// child.age = 27;
+
+// console.log(child);
+
+// const protoName = parent.isPrototypeOf(child);
+// console.log(protoName);
+
+// const animal = {
+//   legs: 4,
+//   name: 'Kiv',
+// };
+// const dog = Object.create(animal);
+// dog.name = 'Mango';
+
+// for (const key in dog) {
+//   if (dog.hasOwnProperty(key)) {
+//     console.log(key);
+//   }
+// }
+
+// const animal = { legs: 4 };
+// const dog = Object.create(animal);
+// dog.name = 'Mango';
+// dog.age = 27;
+
+// console.log(Object.keys(dog).map(qwe => qwe.age));
+
+// console.log(Object.keys(dog)); // ["name"]
+// console.log(Object.values(dog)); // ["Mango"]
+
+// for (const key of Object.keys(dog)) {
+//   console.log(key);
+// }
+
+// const objC = { c: 'objC prop' };
+
+// const objB = Object.create(objC);
+// objB.b = 'objB prop';
+
+// const objA = Object.create(objB);
+// objA.a = 'objA prop';
+
+// console.log(objA); // { a: "objA prop", [[Prototype]]: objB }
+// console.log(objB); // { b: "objB prop", [[Prototype]]: objC }
+// console.log(objC); // { c: "objC prop", [[Prototype]]: Object }
